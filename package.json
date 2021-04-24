@@ -21,11 +21,11 @@
   "contributes": {
     "snippets": [
       {
-        "language": "yml",
+        "language": "yaml",
         "path": "./snippets/snippets.code-snippets"
       },
       {
-        "language": "yml",
+        "language": "yaml",
         "path": "./snippets/master-template.code-snippets"
       }
     ]
