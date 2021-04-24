@@ -1,1 +1,33 @@
-{}
+{
+  "New docker swarm stack file": {
+    "prefix": "dss-new-file",
+    "description": "Docker Swarm Stack New File",
+    "body": [
+      "version: '3.6'",
+      "",
+      "services:",
+      "\t${1:<service name>}:",
+      "\t\timage: ${2:<image>}:${3:<tag>}",
+      "\t\thostname: ${4:<hostname>}",
+      "\t\tdeploy:",
+      "\t\t\tmode: ${5:replicated}",
+      "\t\t\trestart_policy:",
+      "\t\t\t\tcondition: ${6:any}",
+      "\t\t\t\tmax_attempts: ${7:3}",
+      "\t\t\t\tdelay: ${7:30s}",
+      "\t\t\tresources:",
+      "\t\t\t\tlimits:",
+      "\t\t\t\t\tcpus: ${8:'0.50'}",
+      "\t\t\t\t\tmemory: ${9:128M}",
+      "\t\t\t\treservations:",
+      "\t\t\t\t\tcpus: ${8:'0.25'}",
+      "\t\t\t\t\tmemory: ${9:32M}",
+      "\t\thealthcheck:",
+      "\t\t\tdisable: true",
+      "\t\t\t#test: []",
+      "\t\t\tinterval: 10s",
+      "\t\t\ttimeout: 30s",
+      "\t\t\tretries: 3"
+    ]
+  }
+}
