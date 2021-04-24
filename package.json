@@ -27,6 +27,10 @@
       {
         "language": "yaml",
         "path": "./snippets/master-template.code-snippets"
+      },
+      {
+        "language": "yaml",
+        "path": "./snippets/network.code-snippets"
       }
     ]
   }
